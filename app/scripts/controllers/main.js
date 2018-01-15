@@ -1,15 +1,11 @@
 angular
   .module('simpleWeatherApp', []);
 
-////////////////
-// Controller //
-////////////////
 (function() {
   'use strict';
 
   angular
     .module('simpleWeatherApp')
-
 
     .controller('MainController', ['$http', '$sce', '$log', function($http, $sce, $log) {
       // Declare all the private variables
@@ -49,7 +45,6 @@ angular
       var prepareUri = function (uri) {
         return uri.replace(/&/g, '%26');
       };
-
 
       vm.kelvinToCelcius = function(kelvin) {
         // Convert degrees kelvin to degrees Celsius
@@ -99,7 +94,7 @@ angular
 
       vm.weather = {
         current: function() {
-          // Do a JSONP AJAX request to get current weather data, use caching for performance
+          // Do a JSONP AJAX request to get current weather data
           $http.jsonp(_apiUrlCurrent, {cache: true})
             .success(function(data) {
               console.log(data);
@@ -118,7 +113,7 @@ angular
             });
         },
         daily: function() {
-          // Do a JSONP AJAX request to get daily weather data, use caching for performance
+          // Do a JSONP AJAX request to get daily weather data
           $http.jsonp(_apiUrlDaily, { cache: true })
             .success(function(data) {
               // $log.debug("Daily weather data: ", data);
@@ -132,7 +127,7 @@ angular
       };
 
       vm.showIcon = function() {
-        // Choose the cosponsoring icon font letter to the correct weather type
+        // Choose font letter to the correct weather type
         switch (vm.dataCurrent.weather[0].icon) {
           case '01d':
             // Clear sky, day
@@ -215,15 +210,12 @@ angular
         vm.searchBox = '';
       };
 
-
       vm.searchBlur = function() {
         // If the user didn't type a location restore the previous one
         if (vm.searchBox === '') {
           vm.searchBox = _currentLocation;
         };
       };
-
-
 
     }]);
 })();

@@ -1,3 +1,7 @@
+*{
+  margin: 0;
+  padding: 0;
+}
 html{
     font-family:sans-serif;
     -ms-text-size-adjust:100%;
@@ -408,10 +412,60 @@ footer>a{
     color: #000;
     height: 40px;
 }
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 }
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom {
+  from{ bottom:-100px; opacity:0 }
+  to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+}
 @media (min-width:320px) {
   .btn-primary{
     float: none;
-    left: 24px;
+    left: 11px !important;
     position: relative;
     margin-top: 14px;
   }
@@ -431,6 +485,8 @@ footer>a{
    width: 130px;
    font-size: 21px;
    float: none;
+   position: relative;
+   left: 2px;
  }
  .btn-locate{
   margin-top: 14px;
@@ -448,19 +504,3 @@ footer>a{
     height: auto;
   }
 }
-
-/*.location{
-    color: #000;
-    height: 40px;
-    background:url('data:image/svg+xml;
-    utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" width="36" height="36" viewBox="0 0 36 36" enable-background="new 0 0 36 36" xml:space="preserve" style="fill: #fff;
-    fill-opacity:0.4"><path d="M35.5 31.2l-8.9-8.9c1.4-2.2 2.3-4.9 2.3-7.8 0-7.9-6.4-14.3-14.3-14.3 -7.9 0-14.3 6.4-14.3 14.3 0 7.9 6.4 14.3 14.3 14.3 2.9 0 5.5-0.8 7.8-2.3l8.9 8.9c0.3 0.3 0.8 0.3 1.1 0l3.2-3.2C35.8 32 35.8 31.5 35.5 31.2zM4.8 14.6c0-5.4 4.4-9.8 9.8-9.8 5.4 0 9.8 4.4 9.8 9.8 0 5.4-4.4 9.8-9.8 9.8C9.2 24.4 4.8 20 4.8 14.6z"/></svg>') 0.4em 50% no-repeat;
-    color:#fff;
-    font-family:Roboto,"Roboto",sans-serif;
-    font-size:1.4em;
-    font-weight:300;
-    background-color:transparent;
-    border:none;
-    padding:0.4em 0 0.4em 2em;
-    width:11.8em;
-}*/
