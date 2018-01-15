@@ -5,7 +5,8 @@ version 0.16.0.
 
 ## Build & development
 
-Run `gulp serve` for building and  and for preview.
+Npm install && bower install
 
+Run `gulp serve` for building and  and for preview.
 
 # weather-forecast
