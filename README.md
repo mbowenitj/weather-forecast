@@ -5,9 +5,7 @@ version 0.16.0.
 
 ## Build & development
 
-Run `grunt` for building and `grunt serve` for preview.
+Run `gulp serve` for building and  and for preview.
 
-## Testing
 
-Running `grunt test` will run the unit tests with karma.
 # weather-forecast
