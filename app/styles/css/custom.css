@@ -287,7 +287,7 @@ h1{
     background-color:#2196F3
 }
 .card.blue .location-panel{
-    background-color:#1976D2
+    /*background-color:#1976D2*/
 }
 .card.blue+.card{
     color:#1976D2
@@ -296,7 +296,7 @@ h1{
     background-color:#673AB7
 }
 .card.purple .location-panel{
-    background-color:#512DA8
+    /*background-color:#512DA8*/
 }
 .card.purple+.card{
     color:#512DA8
@@ -305,7 +305,7 @@ h1{
     background-color:#607D8B
 }
 .card.grey .location-panel{
-    background-color:#455A64
+    /*background-color:#455A64*/
 }
 .card.grey+.card{
     color:#455A64
@@ -460,7 +460,6 @@ footer>a{
 
 #myDiv {
   display: none;
-  text-align: center;
 }
 @media (min-width:320px) {
   .btn-primary{
